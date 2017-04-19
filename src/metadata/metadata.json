@@ -1,0 +1,210 @@
+{
+  "package": "Breezometer",
+  "tagline": "Breezometer API",
+  "description": "World leading air pollution API. Top features: AQI map, forecast, pollen, air quality data.",
+  "image": "https://logo.clearbit.com/breezometer.com",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Breezometer-Package",
+  "keywords": [
+    "API",
+    "air",
+    "forecast",
+    "weather",
+    "pollution"
+  ],
+  "accounts": {
+    "domain": "breezometer.com",
+    "credentials": [
+      "apiKey"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "getAirQuality",
+      "description": "You can get air quality data by Latitude and Longitude (Geocoding)",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Your BreezoMeter API key.",
+          "required": true
+        },
+        {
+          "name": "latitude",
+          "type": "String",
+          "info": "Geographic coordinate that specifies the north-south position of a point on the Earth’s surface. Range between -90 to 90",
+          "required": true
+        },
+        {
+          "name": "longitude",
+          "type": "String",
+          "info": "Geographic coordinate that specifies the east-west position of a point on the Earth’s surface. Range between -180 to 180",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Set of fields separated by commas",
+          "required": false
+        },
+        {
+          "name": "lang",
+          "type": "String",
+          "info": "Response language. Support English(“en”) and Hebrew(“he”).",
+          "required": false
+        }
+
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSpecificDateAirQuality",
+      "description": "You can get air quality data by Latitude and Longitude (Geocoding)",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Your BreezoMeter API key.",
+          "required": true
+        },
+        {
+          "name": "latitude",
+          "type": "String",
+          "info": "Geographic coordinate that specifies the north-south position of a point on the Earth’s surface. Range between -90 to 90",
+          "required": true
+        },
+        {
+          "name": "longitude",
+          "type": "String",
+          "info": "Geographic coordinate that specifies the east-west position of a point on the Earth’s surface. Range between -180 to 180",
+          "required": true
+        },
+        {
+          "name": "datetime",
+          "type": "String",
+          "info": "The specific time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS",
+          "required": true
+        },
+        {
+          "name": "lang",
+          "type": "String",
+          "info": "Response language. Support English(“en”) and Hebrew(“he”).",
+          "required": false
+        }
+
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getAirQualityHistoryForDateRange",
+      "description": "You can get history air quality data for a range of dates in a specific location (Latitude and Longitude) with a start and end timestamps that will provide an array of results.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Your BreezoMeter API key.",
+          "required": true
+        },
+        {
+          "name": "latitude",
+          "type": "String",
+          "info": "Geographic coordinate that specifies the north-south position of a point on the Earth’s surface. Range between -90 to 90",
+          "required": true
+        },
+        {
+          "name": "longitude",
+          "type": "String",
+          "info": "Geographic coordinate that specifies the east-west position of a point on the Earth’s surface. Range between -180 to 180",
+          "required": true
+        },
+        {
+          "name": "start_datetime",
+          "type": "String",
+          "info": "The specific start time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS",
+          "required": true
+        },
+        {
+          "name": "end_datetime",
+          "type": "String",
+          "info": "The specific end time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS",
+          "required": true
+        },
+        {
+          "name": "interval",
+          "type": "Number",
+          "info": "A time interval represents a period of time (hours) between two BAQI objects. You can choose an interval value (Integer) between 1-24 hours.",
+          "required": false
+        },
+        {
+          "name": "lang",
+          "type": "String",
+          "info": "Response language. Support English(“en”) and Hebrew(“he”).",
+          "required": false
+        }
+
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getAirQualityForecast",
+      "description": "You can get air quality data forecasts for a specific location for the next 24 hours",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Your BreezoMeter API key.",
+          "required": true
+        },
+        {
+          "name": "latitude",
+          "type": "String",
+          "info": "Geographic coordinate that specifies the north-south position of a point on the Earth’s surface. Range between -90 to 90",
+          "required": true
+        },
+        {
+          "name": "longitude",
+          "type": "String",
+          "info": "Geographic coordinate that specifies the east-west position of a point on the Earth’s surface. Range between -180 to 180",
+          "required": true
+        },
+        {
+          "name": "hours",
+          "type": "Number",
+          "info": "Hours represents the period of time for the Forecast data you’ll receive.You can choose any value (integer) up to 96 hours. The default period: 24 hours ",
+          "required": false
+        },
+        {
+          "name": "lang",
+          "type": "String",
+          "info": "Response language. Support English(“en”) and Hebrew(“he”).",
+          "required": false
+        }
+
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    }
+  ]
+}
