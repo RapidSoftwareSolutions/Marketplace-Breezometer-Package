@@ -1,15 +1,17 @@
 {
   "package": "Breezometer",
   "tagline": "Breezometer API",
-  "description": "World leading air pollution API. Top features: AQI map, forecast, pollen, air quality data.",
+  "description": "Connect to the Breezometer Air Quality API to get global, local, real-time data on air quality. Test an API call and export the code snippet into your app. ",
   "image": "https://logo.clearbit.com/breezometer.com",
   "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Breezometer-Package",
   "keywords": [
     "API",
     "air",
-    "forecast",
-    "weather",
-    "pollution"
+    "environmental",
+    "pollution",
+    "quality",
+    "science",
+    "Health"
   ],
   "accounts": {
     "domain": "breezometer.com",

@@ -1,7 +1,7 @@
 [![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/Trello/functions?utm_source=RapidAPIGitHub_TrelloFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
 
 # Breezometer Package
-World leading air pollution API. Top features: AQI map, forecast, pollen, air quality data.
+Connect to the Breezometer Air Quality API to get global, local, real-time data on air quality. Test an API call and export the code snippet into your app.
 * Domain: [breezometer.com](https://breezometer.com)
 * Credentials: apiKey
 
