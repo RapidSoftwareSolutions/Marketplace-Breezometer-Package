@@ -27,7 +27,7 @@ You can get air quality data by Latitude and Longitude (Geocoding)
 |----------|------------|----------
 | apiKey   | credentials| Your BreezoMeter API key.
 | coordinates   | Map     | Geographic coordinate. Latitude and longitude. Example: ```51.491751537714705,-0.02414792776107788```
-| datetime | DatePicker     | The specific time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS
+| datetime | DatePicker     | The specific time you wish to get air quality data for. Date and time format: ```YYYY-MM-DDTHH:mm:SS```
 | lang     | Select     | Response language. Support English(“en”) and Hebrew(“he”).
 
 ## Breezometer.getAirQualityHistoryForDateRange
@@ -37,8 +37,8 @@ You can get history air quality data for a range of dates in a specific location
 |---------------|------------|----------
 | apiKey        | credentials| Your BreezoMeter API key.
 | coordinates   | Map     | Geographic coordinate. Latitude and longitude. Example: ```51.491751537714705,-0.02414792776107788```
-| start_datetime| DatePicker     | The specific start time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS
-| end_datetime  | DatePicker     | The specific end time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS
+| start_datetime| DatePicker     | The specific start time you wish to get air quality data for. Date and time format: ```YYYY-MM-DDTHH:mm:SS```
+| end_datetime  | DatePicker     | The specific end time you wish to get air quality data for. Date and time format: ```YYYY-MM-DDTHH:mm:SS```
 | interval      | Number     | A time interval represents a period of time (hours) between two BAQI objects. You can choose an interval value (Integer) between 1-24 hours.
 | lang          | Select     | Response language. Support English(“en”) and Hebrew(“he”).
 
