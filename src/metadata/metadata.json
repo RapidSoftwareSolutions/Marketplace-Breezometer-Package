@@ -116,13 +116,13 @@
         },
         {
           "name": "start_datetime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "The specific start time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS",
           "required": true
         },
         {
           "name": "end_datetime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "The specific end time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS",
           "required": true
         },

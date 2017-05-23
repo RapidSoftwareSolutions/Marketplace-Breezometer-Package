@@ -16,10 +16,9 @@ You can get air quality data by Latitude and Longitude (Geocoding)
 | Field    | Type       | Description
 |----------|------------|----------
 | apiKey   | credentials| Your BreezoMeter API key.
-| latitude | String     | Geographic coordinate that specifies the north-south position of a point on the Earth’s surface. Range between -90 to 90
-| longitude| String     | Geographic coordinate that specifies the east-west position of a point on the Earth’s surface. Range between -180 to 180
+| coordinates   | Map     | Geographic coordinate. Latitude and longitude. Example: ```51.491751537714705,-0.02414792776107788```
 | fields   | String     | Set of fields separated by commas
-| lang     | String     | Response language. Support English(“en”) and Hebrew(“he”).
+| lang     | Select     | Response language. Support English(“en”) and Hebrew(“he”).
 
 ## Breezometer.getSpecificDateAirQuality
 You can get air quality data by Latitude and Longitude (Geocoding)
@@ -27,10 +26,9 @@ You can get air quality data by Latitude and Longitude (Geocoding)
 | Field    | Type       | Description
 |----------|------------|----------
 | apiKey   | credentials| Your BreezoMeter API key.
-| latitude | String     | Geographic coordinate that specifies the north-south position of a point on the Earth’s surface. Range between -90 to 90
-| longitude| String     | Geographic coordinate that specifies the east-west position of a point on the Earth’s surface. Range between -180 to 180
-| datetime | String     | The specific time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS
-| lang     | String     | Response language. Support English(“en”) and Hebrew(“he”).
+| coordinates   | Map     | Geographic coordinate. Latitude and longitude. Example: ```51.491751537714705,-0.02414792776107788```
+| datetime | DatePicker     | The specific time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS
+| lang     | Select     | Response language. Support English(“en”) and Hebrew(“he”).
 
 ## Breezometer.getAirQualityHistoryForDateRange
 You can get history air quality data for a range of dates in a specific location (Latitude and Longitude) with a start and end timestamps that will provide an array of results.
@@ -38,12 +36,11 @@ You can get history air quality data for a range of dates in a specific location
 | Field         | Type       | Description
 |---------------|------------|----------
 | apiKey        | credentials| Your BreezoMeter API key.
-| latitude      | String     | Geographic coordinate that specifies the north-south position of a point on the Earth’s surface. Range between -90 to 90
-| longitude     | String     | Geographic coordinate that specifies the east-west position of a point on the Earth’s surface. Range between -180 to 180
-| start_datetime| String     | The specific start time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS
-| end_datetime  | String     | The specific end time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS
+| coordinates   | Map     | Geographic coordinate. Latitude and longitude. Example: ```51.491751537714705,-0.02414792776107788```
+| start_datetime| DatePicker     | The specific start time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS
+| end_datetime  | DatePicker     | The specific end time you wish to get air quality data for. Date and time format: YYYY-MM-DDTHH:mm:SS
 | interval      | Number     | A time interval represents a period of time (hours) between two BAQI objects. You can choose an interval value (Integer) between 1-24 hours.
-| lang          | String     | Response language. Support English(“en”) and Hebrew(“he”).
+| lang          | Select     | Response language. Support English(“en”) and Hebrew(“he”).
 
 ## Breezometer.getAirQualityForecast
 ###### (not available in trial version)
@@ -52,8 +49,7 @@ You can get air quality data forecasts for a specific location for the next 24 h
 | Field    | Type       | Description
 |----------|------------|----------
 | apiKey   | credentials| Your BreezoMeter API key.
-| latitude | String     | Geographic coordinate that specifies the north-south position of a point on the Earth’s surface. Range between -90 to 90
-| longitude| String     | Geographic coordinate that specifies the east-west position of a point on the Earth’s surface. Range between -180 to 180
+| coordinates   | Map     | Geographic coordinate. Latitude and longitude. Example: ```51.491751537714705,-0.02414792776107788```
 | hours    | Number     | Hours represents the period of time for the Forecast data you’ll receive.You can choose any value (integer) up to 96 hours. The default period: 24 hours 
-| lang     | String     | Response language. Support English(“en”) and Hebrew(“he”).
+| lang     | Select     | Response language. Support English(“en”) and Hebrew(“he”).
 
