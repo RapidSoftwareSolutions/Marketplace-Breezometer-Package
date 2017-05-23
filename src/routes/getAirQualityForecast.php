@@ -16,7 +16,7 @@ $app->post('/api/Breezometer/getAirQualityForecast', function ($request, $respon
     $coordinates = $post_data['args']['coordinates'];
 
     $latitude = trim(explode(",",$coordinates)[0]);
-    $longitude = trim(explode(",",$coordinates)[0]);
+    $longitude = trim(explode(",",$coordinates)[1]);
 
     $query_str = $settings['forecast_url'];
     $client = $this->httpClient;

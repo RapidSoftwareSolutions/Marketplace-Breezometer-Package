@@ -16,7 +16,7 @@ $app->post('/api/Breezometer/getAirQuality', function ($request, $response) {
     $coordinates = $post_data['args']['coordinates'];
 
     $latitude = trim(explode(",",$coordinates)[0]);
-    $longitude = trim(explode(",",$coordinates)[0]);
+    $longitude = trim(explode(",",$coordinates)[1]);
 
     $query_str = $settings['baqi_url'];
     $client = $this->httpClient;

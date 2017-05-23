@@ -16,7 +16,7 @@ $app->post('/api/Breezometer/getSpecificDateAirQuality', function ($request, $re
     $coordinates = $post_data['args']['coordinates'];
 
     $latitude = trim(explode(",",$coordinates)[0]);
-    $longitude = trim(explode(",",$coordinates)[0]);
+    $longitude = trim(explode(",",$coordinates)[1]);
     $datetime = $post_data['args']['datetime'];
 
     $strTime =  strtotime($datetime);
