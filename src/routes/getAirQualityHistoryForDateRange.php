@@ -4,7 +4,7 @@ $app->post('/api/Breezometer/getAirQualityHistoryForDateRange', function ($reque
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['apiKey','latitude','longitude', 'start_datetime', 'end_datetime']);
+    $validateRes = $checkRequest->validate($request, ['apiKey','coordinates', 'start_datetime', 'end_datetime']);
 
     if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
@@ -13,8 +13,11 @@ $app->post('/api/Breezometer/getAirQualityHistoryForDateRange', function ($reque
     }
 
     $apiKey = $post_data['args']['apiKey'];
-    $latitude = $post_data['args']['latitude'];
-    $longitude = $post_data['args']['longitude'];
+    $coordinates = $post_data['args']['coordinates'];
+
+    $latitude = trim(explode(",",$coordinates)[0]);
+    $longitude = trim(explode(",",$coordinates)[0]);
+
     $start_datetime = $post_data['args']['start_datetime'];
     $end_datetime = $post_data['args']['end_datetime'];
 

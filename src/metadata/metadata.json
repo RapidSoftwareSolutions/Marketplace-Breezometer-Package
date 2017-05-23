@@ -31,15 +31,9 @@
           "required": true
         },
         {
-          "name": "latitude",
-          "type": "String",
-          "info": "Geographic coordinate that specifies the north-south position of a point on the Earth’s surface. Range between -90 to 90",
-          "required": true
-        },
-        {
-          "name": "longitude",
-          "type": "String",
-          "info": "Geographic coordinate that specifies the east-west position of a point on the Earth’s surface. Range between -180 to 180",
+          "name": "coordinates",
+          "type": "Map",
+          "info": "Geographic coordinate. Latitude and longitude. Example: 51.491751537714705,-0.02414792776107788",
           "required": true
         },
         {
@@ -75,15 +69,9 @@
           "required": true
         },
         {
-          "name": "latitude",
-          "type": "String",
-          "info": "Geographic coordinate that specifies the north-south position of a point on the Earth’s surface. Range between -90 to 90",
-          "required": true
-        },
-        {
-          "name": "longitude",
-          "type": "String",
-          "info": "Geographic coordinate that specifies the east-west position of a point on the Earth’s surface. Range between -180 to 180",
+          "name": "coordinates",
+          "type": "Map",
+          "info": "Geographic coordinate. Latitude and longitude. Example: 51.491751537714705,-0.02414792776107788",
           "required": true
         },
         {
@@ -119,15 +107,9 @@
           "required": true
         },
         {
-          "name": "latitude",
-          "type": "String",
-          "info": "Geographic coordinate that specifies the north-south position of a point on the Earth’s surface. Range between -90 to 90",
-          "required": true
-        },
-        {
-          "name": "longitude",
-          "type": "String",
-          "info": "Geographic coordinate that specifies the east-west position of a point on the Earth’s surface. Range between -180 to 180",
+          "name": "coordinates",
+          "type": "Map",
+          "info": "Geographic coordinate. Latitude and longitude. Example: 51.491751537714705,-0.02414792776107788",
           "required": true
         },
         {
@@ -175,15 +157,9 @@
           "required": true
         },
         {
-          "name": "latitude",
-          "type": "String",
-          "info": "Geographic coordinate that specifies the north-south position of a point on the Earth’s surface. Range between -90 to 90",
-          "required": true
-        },
-        {
-          "name": "longitude",
-          "type": "String",
-          "info": "Geographic coordinate that specifies the east-west position of a point on the Earth’s surface. Range between -180 to 180",
+          "name": "coordinates",
+          "type": "Map",
+          "info": "Geographic coordinate. Latitude and longitude. Example: 51.491751537714705,-0.02414792776107788",
           "required": true
         },
         {

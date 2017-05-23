@@ -4,7 +4,7 @@ $app->post('/api/Breezometer/getAirQualityForecast', function ($request, $respon
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['apiKey','latitude','longitude']);
+    $validateRes = $checkRequest->validate($request, ['apiKey','coordinates']);
 
     if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
@@ -13,8 +13,10 @@ $app->post('/api/Breezometer/getAirQualityForecast', function ($request, $respon
     }
 
     $apiKey = $post_data['args']['apiKey'];
-    $latitude = $post_data['args']['latitude'];
-    $longitude = $post_data['args']['longitude'];
+    $coordinates = $post_data['args']['coordinates'];
+
+    $latitude = trim(explode(",",$coordinates)[0]);
+    $longitude = trim(explode(",",$coordinates)[0]);
 
     $query_str = $settings['forecast_url'];
     $client = $this->httpClient;
