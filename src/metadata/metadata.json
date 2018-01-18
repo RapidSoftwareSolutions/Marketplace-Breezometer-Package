@@ -33,7 +33,7 @@
         {
           "name": "coordinates",
           "type": "Map",
-          "info": "Geographic coordinate. Latitude and longitude. Example: 51.491751537714705,-0.02414792776107788",
+          "info": "Geographic coordinate. Latitude and longitude. Example: 51.491751537714705,-0.0241479277610",
           "required": true
         },
         {
